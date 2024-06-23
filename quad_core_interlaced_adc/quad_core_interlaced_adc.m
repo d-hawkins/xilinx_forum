@@ -31,10 +31,10 @@
 %    6      Four cores oversampling the first and second Nyquist zone
 %    7      Four cores oversampling the first and third Nyquist zone
 %
-example = 7;
+example = 1;
 
 % Generate figures for the README.md file
-generate_figures = 1;
+generate_figures = 0;
 
 % -----------------------------------------------------------------------------
 % Parameters
@@ -358,10 +358,6 @@ set(hl,'FontSize',10);
 
 % Annotate the figure
 %
-% * make sure that any axis calls (which re-scale the figure)
-%   occur prior to any call to ds2nfu, since the rescaling
-%   changes the normalized figure units.
-%
 % Input signal power
 str = sprintf('%.2fdB',LF_dB+w_ig_dB);
 text(0.95*(-Nt/2),LF_dB+w_ig_dB+2,str, ...
@@ -506,10 +502,6 @@ for m = 1:Nc,
 	set(hl,'FontSize',10);
 
 	% Annotate the figure
-	%
-	% * make sure that any axis calls (which re-scale the figure)
-	%   occur prior to any call to ds2nfu, since the rescaling
-	%   changes the normalized figure units.
 	%
 	% Input signal power
 	str = sprintf('%.2fdB',LF_dB+w_ig_dB);
@@ -665,10 +657,6 @@ hl=legend(ph, ...
 set(hl,'FontSize',10);
 
 % Annotate the figure
-%
-% * make sure that any axis calls (which re-scale the figure)
-%   occur prior to any call to ds2nfu, since the rescaling
-%   changes the normalized figure units.
 %
 % Input signal power
 str = sprintf('%.2fdB',LF_dB+w_ig_dB);
